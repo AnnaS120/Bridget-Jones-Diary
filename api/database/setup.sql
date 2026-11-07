@@ -5,13 +5,12 @@ CREATE TABLE post (
     post_id INT GENERATED ALWAYS AS IDENTITY,
     title VARCHAR(100) NOT NULL,
     category VARCHAR (100) NOT NULL,
-    content VARCHAR (500) NOT NULL,
+    content VARCHAR (2000) NOT NULL,
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,  
     PRIMARY KEY (post_id)
 );
 
-INSERT INTO post (title, category, content)
-VALUES ('why I love my family', 'family', 'they care about me the most');
+
 
 
 -- CREATE TABLE user_account (

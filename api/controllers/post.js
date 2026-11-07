@@ -1,4 +1,4 @@
-const Post = require('../models/post');
+const Post = require('../models/Post');
 
 async function index (req, res) {
     try {
@@ -29,6 +29,20 @@ async function show (req, res) {
     }
 };
 
+
+async function update(req, res) {
+    try {
+        const id = parseInt(req.params.id);
+        const data = req.body;
+
+        const result = await Post.update(id, data);
+
+        res.json(result);
+    } catch (err) {
+        res.status(404).json({ error: err.message });
+    }
+}
+
 async function destroy (req, res) {
     try {
         const id = parseInt(req.params.id);
@@ -41,5 +55,5 @@ async function destroy (req, res) {
 };
 
 module.exports = {
-    index, create, show, destroy
+    index, create, show, update, destroy
 }
