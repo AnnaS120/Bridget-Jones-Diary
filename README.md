@@ -31,4 +31,11 @@ Backend:
 
 The application implements full CRUD (Create, Read, Update and Delete) functionality, allowing users to manage their diary entries.
 
+| Operation | HTTP Method | Functionality |
+|-----------|-------------|---------------|
+| Create | POST | Create and save a new diary entry. |
+| Read | GET | Retrieve and display diary entries. |
+| Update | PUT | Edit an existing diary entry. |
+| Delete | DELETE | Remove a diary entry from the database. |
 
+These operations are implemented using a RESTful API built with Node.js and Express.js, with PostgreSQL used for persistent data storage.
